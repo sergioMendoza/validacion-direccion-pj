@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "papafont";
+  src: url("../assets/fonts/Knockout-HTF69-FullLiteweight.otf") format("truetype");
+}
+
+main {
+  height: 70vh;
+}
+
+footer {
+  height: 7vh;
+}
+
+.btn-send {
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: #009774;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.search .search__input {
+  border: 2px solid #009774;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 100%;
+  padding: 3px;
+}
+.search .search__button {
+  background-color: #009774;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #009774;
+  border-radius: 18px;
+  z-index: -1;
+}
+
+input[type=radio]:checked + label::before {
+  background-color: #009774;
+}
+
+.comment .comment__textarea {
+  width: 100%;
+  outline: none;
+  border: 2px solid #009774;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 100%;
+  padding: 3px;
+}
+
+.map {
+  height: 0px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  height: 23vh;
+}
+header .header__image {
+  width: 128px;
+}
+header .header__title {
+  background-color: #BB141A;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  font-family: papafont, sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

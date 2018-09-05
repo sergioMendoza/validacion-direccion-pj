@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+  height: 23vh;
+
+  .header__image {
+    width: 128px;
+  }
+
+  .header__title {
+    background-color: $darkred-papa;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    font-family: $papafont, sans-serif;
+    text-align: center
+  }
+}
