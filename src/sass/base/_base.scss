@@ -3,9 +3,13 @@
   
   main {
     height: 70vh;
-  
+    @media (max-width: 340px) {
+      height: 65vh;
+     }
   }
   
   footer {
     height: 7vh;
   }
+
+  
