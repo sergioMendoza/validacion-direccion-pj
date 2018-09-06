@@ -104,9 +104,9 @@ function initMap() {
   var button = document.getElementById('search');
 
   button.addEventListener('click', function () {
-    mapDraw.style.height = '35vh';
-    main.classList.add('redefine-height');
-    footer.style.height = '5vh';
+     mapDraw.style.height = '35vh';
+    // main.classList.add('redefine-height');
+    // footer.style.height = '5vh';
     var text = input.value;
     // inputMap.val(userAddres.value);
     deleteMarkers()
@@ -184,7 +184,7 @@ const deleteMarkers = () => {
 const selectTypeHome = () => {
   let typeHome = getValueRadio('tipo');
   if (typeHome == 'Departamento') {
-    main.classList.add('redefine-main');
+    // main.classList.add('redefine-main');
     showNumDpto();
     validateType = true;
     activeButton();
@@ -192,7 +192,7 @@ const selectTypeHome = () => {
   } else if (typeHome == 'Casa') {
     inputType.value = typeHome;
     validateType = true;
-    main.classList.remove('redefine-main');
+    // main.classList.remove('redefine-main');
     activeButton();
     boxDpto.innerHTML = '';
   } else {

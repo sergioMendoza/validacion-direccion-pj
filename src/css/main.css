@@ -6,17 +6,21 @@
   font-family: "papafont";
   src: url("../assets/fonts/Knockout-HTF69-FullLiteweight.otf") format("truetype");
 }
-main {
-  height: 70vh;
+html {
+  min-height: 100%;
+  position: relative;
 }
-@media (max-width: 340px) {
-  main {
-    height: 65vh;
-  }
+
+body {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 footer {
-  height: 7vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
 }
 
 .btn-send {
@@ -107,32 +111,9 @@ input[type=radio]:checked + label::before {
   width: 100%;
 }
 
-.redefine-height {
-  height: 75vh;
-}
-@media (max-width: 340px) {
-  .redefine-height {
-    height: 79vh;
-  }
-}
-
-.redefine-main {
-  height: 80vh;
-}
-@media (max-width: 340px) {
-  .redefine-main {
-    height: 84vh;
-  }
-}
-
 header {
   text-align: center;
-  height: 23vh;
-}
-@media (max-width: 340px) {
-  header {
-    height: 26vh;
-  }
+  margin-bottom: 1em;
 }
 header .header__image {
   width: 128px;

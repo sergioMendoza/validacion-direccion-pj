@@ -82,16 +82,16 @@ input[type="radio"]:checked+label::before {
   width: 100%;
 }
 
-.redefine-height{
-  height: 75vh;
-  @media (max-width: 340px) {
-    height: 79vh;
-   }
-}
+// .redefine-height{
+//   height: 75vh;
+//   @media (max-width: 340px) {
+//     height: 79vh;
+//    }
+// }
 
-.redefine-main{
-  height: 80vh;
-  @media (max-width: 340px) {
-    height: 84vh;
-   }
-}
+// .redefine-main{
+//   height: 80vh;
+//   @media (max-width: 340px) {
+//     height: 84vh;
+//    }
+// }

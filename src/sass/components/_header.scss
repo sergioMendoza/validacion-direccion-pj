@@ -1,8 +1,9 @@
 header {
   text-align: center;
-  height: 23vh;
+  margin-bottom: 1em;
+  // height: 23vh;
   @media (max-width: 340px) {
-   height: 26vh;
+  //  height: 26vh;
   }
   .header__image {
     width: 128px;
