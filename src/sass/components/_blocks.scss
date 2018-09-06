@@ -15,6 +15,21 @@
   }
 }
 
+
+.num-dpto{
+  .num-dpto__input{
+    width: 50px;
+    border: 2px solid $green-papa;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+}
+
+.pac-container:after {
+  background-image: none !important;
+  height: 0px;
+}
+
 input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -65,4 +80,18 @@ input[type="radio"]:checked+label::before {
 .map {
   height: 0px;
   width: 100%;
+}
+
+.redefine-height{
+  height: 75vh;
+  @media (max-width: 340px) {
+    height: 79vh;
+   }
+}
+
+.redefine-main{
+  height: 80vh;
+  @media (max-width: 340px) {
+    height: 84vh;
+   }
 }

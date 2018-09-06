@@ -7,6 +7,13 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "extends": "eslint:recommended"
-  
+  "extends": "eslint:recommended",
+  "globals": {
+    "google": true,
+    "$":true
+    
+  },
+  "rules": {
+    "no-console": "off"
+}
 }

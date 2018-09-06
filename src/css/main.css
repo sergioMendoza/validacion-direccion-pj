@@ -2,7 +2,10 @@
   font-family: "papafont";
   src: url("../assets/fonts/Knockout-HTF69-FullLiteweight.otf") format("truetype");
 }
-
+@font-face {
+  font-family: "papafont";
+  src: url("../assets/fonts/Knockout-HTF69-FullLiteweight.otf") format("truetype");
+}
 main {
   height: 70vh;
 }
@@ -33,6 +36,18 @@ footer {
   border: none;
   color: white;
   border-radius: 5px;
+}
+
+.num-dpto .num-dpto__input {
+  width: 50px;
+  border: 2px solid #009774;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.pac-container:after {
+  background-image: none !important;
+  height: 0px;
 }
 
 input[type=radio] {
@@ -83,9 +98,32 @@ input[type=radio]:checked + label::before {
   width: 100%;
 }
 
+.redefine-height {
+  height: 75vh;
+}
+@media (max-width: 340px) {
+  .redefine-height {
+    height: 79vh;
+  }
+}
+
+.redefine-main {
+  height: 80vh;
+}
+@media (max-width: 340px) {
+  .redefine-main {
+    height: 84vh;
+  }
+}
+
 header {
   text-align: center;
   height: 23vh;
+}
+@media (max-width: 340px) {
+  header {
+    height: 26vh;
+  }
 }
 header .header__image {
   width: 128px;
@@ -97,6 +135,11 @@ header .header__title {
   padding: 10px;
   font-family: papafont, sans-serif;
   text-align: center;
+}
+@media (max-width: 340px) {
+  header .header__title {
+    font-size: 26px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
