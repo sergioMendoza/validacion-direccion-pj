@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "papafont";
+  src: url('https://cdn.glitch.com/91e28cb2-d37c-4e4b-92be-c94d260d314c%2FKnockout-HTF69-FullLiteweight.otf?1531868956222') format("truetype");
+}
+
+.map {
+  height: 0px;
+  width: 100%;
+}
+
+header {
+  height: 23vh;
+}
+
+main {
+  height: 70vh;
+}
+
+footer {
+  height: 7vh;
+}
+
+.pac-container:after {
+  background-image: none !important;
+  height: 0px;
+}
+
+:root {
+  --red: #F20030;
+  --darkred: #BB141A;
+  --green: #009774;
+  --darkgrey: #807673;
+  --lightgrey: #A39D9B;
+  --freshgrey: #6B514B;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.style-input {
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.btn-send {
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-size: 20px;
+  padding: 10px
+}
+
+.box-refer {
+  width: 100%;
+  outline: none;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--green);
+  border-radius: 18px;
+  z-index: -1;
+}
+
+input[type="radio"]:checked+label::before {
+  background-color: var(--green)
+}
+
+.title-address {
+  background-color: var(--darkred);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  font-family: "papafont";
+  text-align: center
+}
+
+.search-address {
+  background-color: var(--green);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.width75 {
+  width: 100%;
+  padding: 3px;
+}
+
+.number-dpto {
+  width: 50px
+}
+
+.box-dpto {
+  margin-left: 155px;
+}
+
+.btn-desactive {
+  background-color: var(--lightgrey);
+}
+
+.logo-papa {
+  width: 128px;
+}
