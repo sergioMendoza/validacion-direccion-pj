@@ -85,12 +85,12 @@ window.extAsyncInit = function() {
     console.log('MessengerExtensions are ready');
 
     // Handle button click
-    $('#preferencesForm').submit(function(event) {
+    $('#ubication-user').submit(function(event) {
         console.log('Pressed submit button');
         event.preventDefault();
 
         // Get the form data to send to our endpoint
-        const formData = $('#preferencesForm').serialize();
+        const formData = $('#ubication-user').serialize();
 
         MessengerExtensions.requestCloseBrowser(function success() {
             // webview closed
