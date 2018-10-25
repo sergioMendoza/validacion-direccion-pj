@@ -1,98 +1,114 @@
 <!DOCTYPE html>
-<html>
-<head><title>Dirección</title>
-    <meta name="description" content="Dynamic webview">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Direccion</title>
 </head>
+
 <body>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Messenger'));</script>
-</body>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+</script>
 <header>
-    <div class="text-center"><img class="logo-papa"
-                                  src="https://cdn.glitch.com/91e28cb2-d37c-4e4b-92be-c94d260d314c%2Flogo-small-no-text-papa-johns.png?1531868931842"
-                                  alt=""></div>
-    <div class="title-address"><p class="mb-0"><i class="fas fa-map-marker-alt pr-2"></i>DIRECCI&Oacute;N Y ZONA DE
-        REPARTO</p></div>
-</header>
-<main class="containerPrincipal">
-    <div class="pl-3 pt-3 pr-1"><input class="width75 style-input" id="address" type="text"
-                                       placeholder="Ingresa tu dirección"></div>
-    <div class="text-center mt-2">
-        <button class="search-address pl-4 pr-4 pt-2 pb-2" id="search">Buscar en el mapa</button>
+    <div>
+        <img class="header__image" src="assets/images/logo.png" alt="logo">
     </div>
+    <div class="header__title">
+        <p class="mb-0">
+            <i class="fas fa-map-marker-alt pr-2"></i>DIRECCIÓN Y ZONA DE REPARTO</p>
+    </div>
+</header>
+<main>
+    <section class="search">
+        <div class="pl-3 pr-3">
+            <input type="text" id="address" class="search__input">
+
+        </div>
+        <div class="text-center mt-3">
+            <button id="search" class="search__button pl-4 pr-4 pt-2 pb-2">
+                Buscar en el mapa
+            </button>
+        </div>
+    </section>
+
     <div class="container">
         <div class="row p-3">
             <div class="map col-12" id="map"></div>
+
         </div>
     </div>
-    <form class="pl-3 text-center" id="radiotipo"><input id="rb1" type="radio" name="tipo" value="Casa"><label
-            for="rb1">Casa</label><input id="rb2" type="radio" name="tipo" value="Departamento"><label for="rb2">Departamento</label>
+    <form id=radiotipo class="pl-3 text-center">
+        <input type="radio" name="tipo" value="Casa" id="rb1"/>
+        <label for="rb1">Casa</label>
+        <input type="radio" name="tipo" value="Departamento" id="rb2"/>
+        <label for="rb2">Departamento</label>
     </form>
-    <div id="box-dpto-number"></div>
-    <div class="pr-3 pl-3 pt-1"><textarea class="box-refer style-input" id="referencias" type="text"
-                                          placeholder="Detalles y referencias"></textarea></div>
+    <div id="box-dpto-number">
+    </div>
+
+    <div class="p-3 comment">
+        <textarea id="referencias" placeholder="Detalles y referencias" class="comment__textarea"></textarea>
+    </div>
 </main>
 <footer>
     <div>
-        <form id="preferencesForm"><input id="inputMap" type="hidden" name="direccionusuario"><input
-                id="inputReferences" type="hidden" name="referencia"><input id="inputNumDpto" type="hidden"
-                                                                            name="numdpto"><input id="inputType"
-                                                                                                  type="hidden"
-                                                                                                  name="typehome"><input
-                id="inputLimit" type="hidden" name="limitMap"><input type="hidden" name="userId"
-                                                                     value="1851960371546630"><input type="hidden"
-                                                                                                     name="blockName"
-                                                                                                     value="responsewebconsulta">
+        <form id="preferencesForm">
+            <input id="inputMap" type="hidden" name="direccionusuario">
+            <input id="inputReferences" type="hidden" name="referencia">
+            <input id="inputNumDpto" type="hidden" name="numdpto">
+            <input id="inputType" type="hidden" name="typehome">
+            <input id="inputLimit" type="hidden" name="limitMap">
+            <input type="hidden" name="userId" value="1851960371546630">
+            <input type="hidden" name="blockName" value="responsewebconsulta">
             <button class="btn-send text-center" id="send" type="submit">Enviar<span id="total"></span></button>
         </form>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"
-        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
-<script>// This function is called when the extensions are loaded and ready
-window.extAsyncInit = function () {
-    console.log('MessengerExtensions are ready');
+<script>
+    window.extAsyncInit = function () {
+        console.log('MessengerExtensions are ready');
 
-    // Handle button click
-    $('#preferencesForm').submit(function (event) {
-        console.log('Pressed submit button');
-        event.preventDefault();
+        // Handle button click
+        $('#preferencesForm').submit(function (event) {
+            console.log('Pressed submit button');
+            event.preventDefault();
 
-        // Get the form data to send to our endpoint
-        const formData = $('#preferencesForm').serialize();
+            // Get the form data to send to our endpoint
+            const formData = $('#preferencesForm').serialize();
 
-        // Post to our server endpoint to broadcast back to the user
-
-        MessengerExtensions.requestCloseBrowser(function success() {
-            // webview closed
-            console.log('Closed the window!');
-        }, function error(error) {
-            // an error occurred
-            console.log('Error closing browser window!');
-            console.log(error);
-            $('#infoMessage').text(`requestCloseBrowser error : ${error}`);
+            // Post to our server endpoint to broadcast back to the user
+            $.post('https://74671f02.ngrok.io/webhook', formData, (data) => {
+                MessengerExtensions.requestCloseBrowser(function success() {
+                    // webview closed
+                    console.log('Closed the window!');
+                }, function error(error) {
+                    // an error occurred
+                    console.log('Error closing browser window!');
+                    console.log(error);
+                    $('#infoMessage').text(`requestCloseBrowser error : ${error}`);
+                });
+            });
         });
-
-    });
-};</script>
+    };
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7YnCgF_fr5JpSoRsZZ5C9_YvooKa62Jc&callback=initMap&libraries=places"></script>
 <script src="js/client.js"></script>
-<script async="" defer=""
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7YnCgF_fr5JpSoRsZZ5C9_YvooKa62Jc&amp;callback=initMap&amp;libraries=places"></script>
+</body>
+
 </html>
