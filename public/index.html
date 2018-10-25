@@ -89,7 +89,7 @@
             event.preventDefault();
 
             // Get the form data to send to our endpoint
-            const formData = $('#preferencesForm').serialize();
+            const formData = JSON.stringify($('#preferencesForm').serialize());
 
             // Post to our server endpoint to broadcast back to the user
             $.post('https://74671f02.ngrok.io/webhook', formData, (data) => {
