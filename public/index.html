@@ -82,30 +82,37 @@
 
 
         $('#send').click(function (event) {
-            $.post("https://cb4170cb.ngrok.io/geolocations", function () {
-                var nameAddr = $('#inputMap').value;
-                var reference = $('#inputReferences').value;
-                var number = $('#inputNumDpto').value;
-                var type = $('#inputType').value;
 
-                var request = {
-                    nameAddress: encodeURI(nameAddr),
-                    reference: reference,
-                    number:number,
-                    type:type
-                }
+            var nameAddr = $('#inputMap').value;
+            var reference = $('#inputReferences').value;
+            var number = $('#inputNumDpto').value;
+            var type = $('#inputType').value;
+
+            var request = {
+                nameAddress: encodeURI(nameAddr),
+                reference: reference,
+                number:number,
+                type:type
+            }
+
+            $.post("https://cb4170cb.ngrok.io/geolocations",request, function (result) {
+
+                console.log(result);
+
+                MessengerExtensions.requestCloseBrowser(function success() {
+                    // webview closed
+                    console.log('Closed the window!');
+                }, function error(error) {
+                    // an error occurred
+                    console.log('Error closing browser window!');
+                    console.log(error);
+
+                });
+
             });
 
         });
-        MessengerExtensions.requestCloseBrowser(function success() {
-            // webview closed
-            console.log('Closed the window!');
-        }, function error(error) {
-            // an error occurred
-            console.log('Error closing browser window!');
-            console.log(error);
 
-        });
 
     };
 </script>
