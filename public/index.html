@@ -67,16 +67,11 @@
 </main>
 <footer>
     <div>
-        <form id="preferencesForm">
-            <input id="inputMap" type="hidden" name="direccionusuario">
-            <input id="inputReferences" type="hidden" name="referencia">
-            <input id="inputNumDpto" type="hidden" name="numdpto">
-            <input id="inputType" type="hidden" name="typehome">
-            <input id="inputLimit" type="hidden" name="limitMap">
-            <input type="hidden" name="userId" value="1851960371546630">
-            <input type="hidden" name="blockName" value="responsewebconsulta">
-            <button class="btn-send text-center" id="send" type="submit">Enviar<span id="total"></span></button>
-        </form>
+        <input id="inputMap" type="hidden" name="direccionusuario">
+        <input id="inputReferences" type="hidden" name="referencia">
+        <input id="inputNumDpto" type="hidden" name="numdpto">
+        <input id="inputType" type="hidden" name="typehome">
+        <button class="btn-send text-center" id="send">Enviar<span id="total"></span></button>
     </div>
 </footer>
 <script>
@@ -84,25 +79,34 @@
         console.log('MessengerExtensions are ready');
 
         // Handle button click
-        $('#preferencesForm').submit(function (event) {
-            console.log('Pressed submit button');
-            event.preventDefault();
-
-            // Get the form data to send to our endpoint
-            const formData = JSON.stringify($('#preferencesForm').serialize());
 
 
-            MessengerExtensions.requestCloseBrowser(function success() {
-                // webview closed
-                console.log('Closed the window!');
-            }, function error(error) {
-                // an error occurred
-                console.log('Error closing browser window!');
-                console.log(error);
+        $('#send').click(function (event) {
+            $.post("https://cb4170cb.ngrok.io/geolocations", function () {
+                var nameAddr = $('#inputMap').value;
+                var reference = $('#inputReferences').value;
+                var number = $('#inputNumDpto').value;
+                var type = $('#inputType').value;
 
+                var request = {
+                    nameAddress: encodeURI(nameAddr),
+                    reference: reference,
+                    number:number,
+                    type:type
+                }
             });
 
         });
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+            console.log('Closed the window!');
+        }, function error(error) {
+            // an error occurred
+            console.log('Error closing browser window!');
+            console.log(error);
+
+        });
+
     };
 </script>
 <script async defer
