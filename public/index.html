@@ -95,21 +95,20 @@
                 type:type
             }
 
-            $.post("https://cb4170cb.ngrok.io/geolocations",request, function (result) {
 
-                console.log(result);
 
-                MessengerExtensions.requestCloseBrowser(function success() {
-                    // webview closed
-                    console.log('Closed the window!');
-                }, function error(error) {
-                    // an error occurred
-                    console.log('Error closing browser window!');
-                    console.log(error);
+            $.post( "https://cb4170cb.ngrok.io/geolocations", { name: "John", time: "2pm" })
+                .done(function( data ) {
+                    MessengerExtensions.requestCloseBrowser(function success() {
+                        // webview closed
+                        console.log('Closed the window!');
+                    }, function error(error) {
+                        // an error occurred
+                        console.log('Error closing browser window!');
+                        console.log(error);
 
+                    });
                 });
-
-            });
 
         });
 
