@@ -83,10 +83,10 @@
 
         $('#send').click(function (event) {
 
-            var nameAddr = $('#inputMap').value;
-            var reference = $('#inputReferences').value;
-            var number = $('#inputNumDpto').value;
-            var type = $('#inputType').value;
+            var nameAddr = $('#inputMap').val();
+            var reference = $('#inputReferences').val();
+            var number = $('#inputNumDpto').val();
+            var type = $('#inputType').val();
 
             var request = {
                 nameAddress: encodeURI(nameAddr),
