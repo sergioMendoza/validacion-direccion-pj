@@ -98,9 +98,8 @@
             $.ajax({
                 type: "POST",
                 url: "https://b65e07ca.ngrok.io/geolocations",
-                data: request,
+                data: JSON.stringify(request),
                 dataType: 'json',
-                contentType: "application/json",
                 success: function (response) {
 
                     console.log(response);
