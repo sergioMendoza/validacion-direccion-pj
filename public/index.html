@@ -95,22 +95,34 @@
                 type: type
             };
 
-            $.ajax({
-                type: "POST",
-                url: "https://10ef9d65.ngrok.io/geolocations",
-                data: JSON.stringify(request),
-                dataType: 'json',
-                success: function (response) {
+            MessengerExtensions.getContext('268102330509980',
+                function success(thread_context){
 
-                    console.log(response);
-                    MessengerExtensions.requestCloseBrowser(function success() {
-                        console.log('closing');
-                    }, function error(err) {
-                        console.log('some error:'+ err);
+                    request.fbSenderId = thread_context.psid;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "https://10ef9d65.ngrok.io/geolocations",
+                        data: JSON.stringify(request),
+                        dataType: 'json',
+                        success: function (response) {
+                            console.log(response);
+                            MessengerExtensions.requestCloseBrowser(function success() {
+                                console.log('closing');
+                            }, function error(err) {
+                                console.log('some error:'+ err);
+                            });
+
+                        },
                     });
 
                 },
-            });
+                function error(err){
+                    console.log('some error:'+ err);
+                }
+            );
+
+
 
 
         });
