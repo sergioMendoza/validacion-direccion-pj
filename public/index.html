@@ -103,6 +103,11 @@
                 success: function (response) {
 
                     console.log(response);
+                    MessengerExtensions.requestCloseBrowser(function success() {
+                        console.log('closing');
+                    }, function error(err) {
+                        console.log('some error:'+ err);
+                    });
 
                 },
             });
